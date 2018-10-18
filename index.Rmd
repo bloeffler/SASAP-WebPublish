@@ -2,7 +2,13 @@
 title: "index"
 author: "Ben"
 date: "October 17, 2018"
-output: html_document
+output: 
+  html_document:
+    toc: yes
+    toc_float: yes
+    number_sections: yes
+    theme: flatly
+
 ---
 
 ```{r setup, include=FALSE}
@@ -45,6 +51,8 @@ locations <- esc %>%
 datatable(locations)
 
 ```
+
+## Maps
 
 ```{r}
 leaflet(locations) %>% 
